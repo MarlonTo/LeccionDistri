@@ -1,7 +1,13 @@
 <?php
 // Incluye la conexión SOAP
-include '../soap_connection.php';
+$wsdl = "http://localhost:54036/Service1.svc?wsdl";
+try {
+    $client = new SoapClient($wsdl);
+} catch (Exception $e) {
+    die("Error al conectarse al servicio SOAP: " . $e->getMessage());
+}
 
+// Verifica si se pasó un ID de producto
 if (!isset($_GET['id'])) {
     die("ID del producto no especificado.");
 }
@@ -10,12 +16,12 @@ $productID = intval($_GET['id']);
 $product = null;
 
 try {
-    // Obtiene el producto por ID desde el servicio SOAP
-    $response = $client->GetProductsByID(['productID' => $productID]);
-    if (isset($response->GetProductsByIDResult->Products[0])) {
-        $product = $response->GetProductsByIDResult->Products[0];
+    $response = $client->GetProductoById(['Id' => $productID]); // Usa el nombre correcto del método
+    var_dump($response);
+    if (isset($response->GetProductoByIdResult)) {
+        $product = $response->GetProductoByIdResult;
     } else {
-        die("Producto no encontrado.");
+        die("Producto no encontrado en la respuesta del servicio.");
     }
 } catch (Exception $e) {
     die("Error al obtener el producto: " . $e->getMessage());
@@ -23,27 +29,33 @@ try {
 
 // Si se envía el formulario
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $productName = $_POST['ProductName'];
-    $categoryID = intval($_POST['CategoryID']);
-    $unitPrice = floatval($_POST['UnitPrice']);
-    $unitsInStock = intval($_POST['UnitsInStock']);
+    // Sanitización y validación de entradas
+    $productName = trim($_POST['ProductName']);
+    $categoryID = filter_var($_POST['CategoryID'], FILTER_VALIDATE_INT);
+    $unitPrice = filter_var($_POST['UnitPrice'], FILTER_VALIDATE_FLOAT);
+    $unitsInStock = filter_var($_POST['UnitsInStock'], FILTER_VALIDATE_INT);
 
-    try {
-        // Actualiza el producto en el servicio SOAP
-        $updateResponse = $client->UpdateProducts([
-            'product' => [
-                'ProductID' => $productID,
-                'ProductName' => $productName,
-                'CategoryID' => $categoryID,
-                'UnitPrice' => $unitPrice,
-                'UnitsInStock' => $unitsInStock,
-            ]
-        ]);
+    if (!$productName || !$categoryID || $unitPrice === false || $unitsInStock === false) {
+        $error = "Por favor, ingresa datos válidos en todos los campos.";
+    } else {
+        try {
+            // Actualiza el producto en el servicio SOAP
+            $updateResponse = $client->UpdateProducto([
+                'Products' => [
+                    'ProductID' => $productID,
+                    'ProductName' => $productName,
+                    'CategoryID' => $categoryID,
+                    'UnitPrice' => $unitPrice,
+                    'UnitsInStock' => $unitsInStock,
+                ]
+            ]);
 
-        header("Location: products_list.php?message=Producto actualizado correctamente");
-        exit;
-    } catch (Exception $e) {
-        $error = "Error al actualizar el producto: " . $e->getMessage();
+            // Redirecciona en caso de éxito
+            header("Location: lista.php?message=Producto actualizado correctamente");
+            exit;
+        } catch (Exception $e) {
+            $error = "Error al actualizar el producto: " . $e->getMessage();
+        }
     }
 }
 ?>
@@ -65,19 +77,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <form method="POST">
         <div class="mb-3">
             <label for="ProductName" class="form-label">Nombre del Producto</label>
-            <input type="text" class="form-control" id="ProductName" name="ProductName" value="<?= htmlspecialchars($product->ProductName) ?>" required>
+            <input type="text" class="form-control" id="ProductName" name="ProductName" 
+                   value="<?= htmlspecialchars($product->ProductName ?? '') ?>" required>
         </div>
         <div class="mb-3">
             <label for="CategoryID" class="form-label">ID de Categoría</label>
-            <input type="number" class="form-control" id="CategoryID" name="CategoryID" value="<?= htmlspecialchars($product->CategoryID) ?>" required>
+            <input type="number" class="form-control" id="CategoryID" name="CategoryID" 
+                   value="<?= htmlspecialchars($product->CategoryID ?? '') ?>" required>
         </div>
         <div class="mb-3">
             <label for="UnitPrice" class="form-label">Precio Unitario</label>
-            <input type="number" step="0.01" class="form-control" id="UnitPrice" name="UnitPrice" value="<?= htmlspecialchars($product->UnitPrice) ?>" required>
+            <input type="number" step="0.01" class="form-control" id="UnitPrice" name="UnitPrice" 
+                   value="<?= htmlspecialchars($product->UnitPrice ?? '') ?>" required>
         </div>
         <div class="mb-3">
             <label for="UnitsInStock" class="form-label">Unidades en Stock</label>
-            <input type="number" class="form-control" id="UnitsInStock" name="UnitsInStock" value="<?= htmlspecialchars($product->UnitsInStock) ?>" required>
+            <input type="number" class="form-control" id="UnitsInStock" name="UnitsInStock" 
+                   value="<?= htmlspecialchars($product->UnitsInStock ?? '') ?>" required>
         </div>
         <button type="submit" class="btn btn-primary">Actualizar Producto</button>
         <a href="products_list.php" class="btn btn-secondary">Cancelar</a>

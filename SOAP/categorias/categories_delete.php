@@ -1,12 +1,18 @@
 <?php
-include '../soap_connection.php';
+$wsdl = "http://localhost:54036/Service1.svc?wsdl";
+$client = new SoapClient($wsdl);
 
 if (isset($_GET['id'])) {
     try {
-        $client->DeleteCategories(['categories' => ['CategoryID' => intval($_GET['id'])]]);
+        // Llamada al servicio SOAP para eliminar la categoría, usando el parámetro 'Id'
+        $response = $client->DeleteCategoria(['Id' => $_GET['id']]);
+
+        // Redirige a listado.php después de la eliminación exitosa
         header("Location: lista.php");
-    } catch (Exception $e) {
-        die("Error al eliminar categoría: " . $e->getMessage());
+        exit(); // Asegura que el script se detenga aquí
+    } catch (SoapFault $e) {
+        // Maneja cualquier error de la llamada SOAP
+        echo "Error en la conexión con el servicio web: " . $e->getMessage();
     }
 }
 ?>

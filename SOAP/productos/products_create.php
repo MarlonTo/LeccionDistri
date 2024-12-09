@@ -10,20 +10,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $unitsInStock = intval($_POST['UnitsInStock']);
 
     try {
-        // Crea un objeto Products para enviar al servicio SOAP
-        $product = new stdClass();
-        $product->ProductName = $productName;
-        $product->CategoryID = $categoryID;
-        $product->UnitPrice = $unitPrice;
-        $product->UnitsInStock = $unitsInStock;
-
-        // Envía los datos al servicio SOAP para crear el producto
-        $response = $client->CreateProducts($product);
-
-        // Redirige después de crear el producto
-        header("Location: products_list.php?message=Producto creado correctamente");
-        exit;
-    } catch (Exception $e) {
+        // Crea el producto como un array asociativo para el SOAP
+        $params = [
+            'Products' => [
+                'ProductName' => $productName,
+                'CategoryID' => $categoryID,
+                'UnitPrice' => $unitPrice,
+                'UnitsInStock' => $unitsInStock
+            ]
+        ];
+    
+        // Llama al servicio SOAP
+        $response = $client->__soapCall('InsertProducto', [$params]);
+    
+        // Verifica la respuesta
+        if ($response) {
+            header("Location: lista.php?message=Producto creado correctamente");
+            exit;
+        } else {
+            $error = "Error: No se pudo crear el producto.";
+        }
+    } catch (SoapFault $e) {
         $error = "Error al crear el producto: " . $e->getMessage();
     }
 }

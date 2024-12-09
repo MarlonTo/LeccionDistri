@@ -1,60 +1,57 @@
 <?php
-include '../soap_connection.php';
-
-// Obtén el ID de la categoría desde la URL
-if (!isset($_GET['id'])) {
-    die("ID de categoría no proporcionado.");
+// Incluye la conexión SOAP
+$wsdl = "http://localhost:54036/Service1.svc?wsdl";
+try {
+    $client = new SoapClient($wsdl);
+} catch (Exception $e) {
+    die("Error al conectarse al servicio SOAP: " . $e->getMessage());
 }
 
-$categoryID = (int)$_GET['id'];
+// Verifica si se pasó un ID de categoría
+if (!isset($_GET['id'])) {
+    die("ID de la categoría no especificado.");
+}
+
+$CategoryID = intval($_GET['id']);
+$category = null;
 
 try {
-    // Llama al servicio SOAP para obtener la categoría por ID
-    $response = $client->GetCategoriesByID(['CategoryID' => $categoryID]);
-
-    // Valida la respuesta
-    if (isset($response->GetCategoriesByIDResult->Categories)) {
-        $category = $response->GetCategoriesByIDResult->Categories;
-
-        // Si la respuesta contiene múltiples categorías, selecciona la primera
-        if (is_array($category)) {
-            $category = $category[0];
-        }
-
-        // Si no se encontró la categoría
-        if (!$category) {
-            die("Categoría no encontrada.");
-        }
+    $response = $client->GetCategoriaById(['Id' => $CategoryID]); // Usa el método correcto para obtener una categoría
+    if (isset($response->GetCategoriaByIdResult)) {
+        $category = $response->GetCategoriaByIdResult;
     } else {
-        die("Categoría no encontrada.");
+        die("Categoría no encontrada en la respuesta del servicio.");
     }
 } catch (Exception $e) {
     die("Error al obtener la categoría: " . $e->getMessage());
 }
 
-// Lógica para actualizar la categoría
+// Si se envía el formulario
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $categoryName = $_POST['CategoryName'];
-    $description = $_POST['Description'];
+    // Sanitización y validación de entradas
+    $categoryID = $CategoryID;
+    $categoryName = trim($_POST['CategoryName']);
+    $description = trim($_POST['Description']);
 
-    try {
-        // Llama al servicio SOAP para actualizar la categoría
-        $updateResponse = $client->UpdateCategories([
-            'CategoryID' => $categoryID,
-            'CategoryName' => $categoryName,
-            'Description' => $description
-        ]);
+    if (!$categoryName || !$description) {
+        $error = "Por favor, ingresa datos válidos en todos los campos.";
+    } else {
+        try {
+            // Actualiza la categoría en el servicio SOAP
+            $updateResponse = $client->UpdateCategoria([
+                'Categories' => [
+                    'CategoryID' => $categoryID,
+                    'CategoryName' => $categoryName,
+                    'Description' => $description,
+                ]
+            ]);
 
-        // Valida si la actualización fue exitosa
-        if ($updateResponse->UpdateCategoryResult) {
-            // Redirige al listado de categorías
-            header("Location: lista.php?message=Categoría actualizada correctamente");
+            // Redirecciona en caso de éxito
+            header("Location: lista_categorias.php?message=Categoría actualizada correctamente");
             exit;
-        } else {
-            die("Error al actualizar la categoría.");
+        } catch (Exception $e) {
+            $error = "Error al actualizar la categoría: " . $e->getMessage();
         }
-    } catch (Exception $e) {
-        die("Error al actualizar la categoría: " . $e->getMessage());
     }
 }
 ?>
@@ -70,22 +67,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
 <div class="container mt-5">
     <h1>Editar Categoría</h1>
-    <form method="post">
-        <input type="hidden" name="CategoryID" value="<?= htmlspecialchars($category->CategoryID) ?>">
-
+    <?php if (isset($error)): ?>
+        <div class="alert alert-danger"><?= htmlspecialchars($error) ?></div>
+    <?php endif; ?>
+    <form method="POST">
         <div class="mb-3">
             <label for="CategoryName" class="form-label">Nombre de la Categoría</label>
-            <input type="text" class="form-control" id="CategoryName" name="CategoryName"
-                   value="<?= htmlspecialchars($category->CategoryName) ?>" required>
+            <input type="text" class="form-control" id="CategoryName" name="CategoryName" 
+                   value="<?= htmlspecialchars($category->CategoryName ?? '') ?>" required>
         </div>
-
         <div class="mb-3">
             <label for="Description" class="form-label">Descripción</label>
-            <textarea class="form-control" id="Description" name="Description" required><?= htmlspecialchars($category->Description) ?></textarea>
+            <textarea class="form-control" id="Description" name="Description" rows="3" required><?= htmlspecialchars($category->Description ?? '') ?></textarea>
         </div>
-
-        <button type="submit" class="btn btn-primary">Actualizar</button>
-        <a href="lista.php" class="btn btn-secondary">Cancelar</a>
+        <button type="submit" class="btn btn-primary">Actualizar Categoría</button>
+        <a href="lista_categorias.php" class="btn btn-secondary">Cancelar</a>
     </form>
 </div>
 </body>
