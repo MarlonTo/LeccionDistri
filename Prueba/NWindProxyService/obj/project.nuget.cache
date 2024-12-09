@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "J4z4omSU+9Y=",
+  "success": true,
+  "projectFilePath": "C:\\DISTRIBUIDAS\\Prueba\\NWindProxyService\\NWindProxyService.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Asus\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\microsoft.net.sdk.compilers.toolset\\9.0.100\\microsoft.net.sdk.compilers.toolset.9.0.100.nupkg.sha512"
+  ],
+  "logs": []
+}

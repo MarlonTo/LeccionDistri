@@ -1,0 +1,12 @@
+C:\DISTRIBUIDAS\Prueba\SOAP\bin\SOAP.dll.config
+C:\DISTRIBUIDAS\Prueba\SOAP\bin\SOAP.dll
+C:\DISTRIBUIDAS\Prueba\SOAP\bin\SOAP.pdb
+C:\DISTRIBUIDAS\Prueba\SOAP\bin\EntityFramework.dll
+C:\DISTRIBUIDAS\Prueba\SOAP\bin\EntityFramework.SqlServer.dll
+C:\DISTRIBUIDAS\Prueba\SOAP\bin\EntityFramework.xml
+C:\DISTRIBUIDAS\Prueba\SOAP\bin\EntityFramework.SqlServer.xml
+C:\DISTRIBUIDAS\Prueba\SOAP\obj\Debug\SOAP.csproj.AssemblyReference.cache
+C:\DISTRIBUIDAS\Prueba\SOAP\obj\Debug\SOAP.csproj.CoreCompileInputs.cache
+C:\DISTRIBUIDAS\Prueba\SOAP\obj\Debug\SOAP.csproj.Up2Date
+C:\DISTRIBUIDAS\Prueba\SOAP\obj\Debug\SOAP.dll
+C:\DISTRIBUIDAS\Prueba\SOAP\obj\Debug\SOAP.pdb

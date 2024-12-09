@@ -1,0 +1,5 @@
+C:\DISTRIBUIDAS\SalesV1\NWindProxyService\obj\Debug\netcoreapp3.1\NWindProxyService.csproj.AssemblyReference.cache
+C:\DISTRIBUIDAS\SalesV1\NWindProxyService\obj\Debug\netcoreapp3.1\NWindProxyService.GeneratedMSBuildEditorConfig.editorconfig
+C:\DISTRIBUIDAS\SalesV1\NWindProxyService\obj\Debug\netcoreapp3.1\NWindProxyService.AssemblyInfoInputs.cache
+C:\DISTRIBUIDAS\SalesV1\NWindProxyService\obj\Debug\netcoreapp3.1\NWindProxyService.AssemblyInfo.cs
+C:\DISTRIBUIDAS\SalesV1\NWindProxyService\obj\Debug\netcoreapp3.1\NWindProxyService.csproj.CoreCompileInputs.cache

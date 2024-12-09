@@ -1,0 +1,17 @@
+C:\DISTRIBUIDAS\SalesV1\NWindProxyService\bin\Debug\net8.0\NWindProxyService.deps.json
+C:\DISTRIBUIDAS\SalesV1\NWindProxyService\bin\Debug\net8.0\NWindProxyService.dll
+C:\DISTRIBUIDAS\SalesV1\NWindProxyService\bin\Debug\net8.0\NWindProxyService.pdb
+C:\DISTRIBUIDAS\SalesV1\NWindProxyService\bin\Debug\net8.0\Entities.dll
+C:\DISTRIBUIDAS\SalesV1\NWindProxyService\bin\Debug\net8.0\SLC.dll
+C:\DISTRIBUIDAS\SalesV1\NWindProxyService\bin\Debug\net8.0\Entities.pdb
+C:\DISTRIBUIDAS\SalesV1\NWindProxyService\bin\Debug\net8.0\SLC.pdb
+C:\DISTRIBUIDAS\SalesV1\NWindProxyService\obj\Debug\net8.0\NWindProxyService.csproj.AssemblyReference.cache
+C:\DISTRIBUIDAS\SalesV1\NWindProxyService\obj\Debug\net8.0\NWindProxyService.GeneratedMSBuildEditorConfig.editorconfig
+C:\DISTRIBUIDAS\SalesV1\NWindProxyService\obj\Debug\net8.0\NWindProxyService.AssemblyInfoInputs.cache
+C:\DISTRIBUIDAS\SalesV1\NWindProxyService\obj\Debug\net8.0\NWindProxyService.AssemblyInfo.cs
+C:\DISTRIBUIDAS\SalesV1\NWindProxyService\obj\Debug\net8.0\NWindProxyService.csproj.CoreCompileInputs.cache
+C:\DISTRIBUIDAS\SalesV1\NWindProxyService\obj\Debug\net8.0\NWindPro.37EB41C3.Up2Date
+C:\DISTRIBUIDAS\SalesV1\NWindProxyService\obj\Debug\net8.0\NWindProxyService.dll
+C:\DISTRIBUIDAS\SalesV1\NWindProxyService\obj\Debug\net8.0\refint\NWindProxyService.dll
+C:\DISTRIBUIDAS\SalesV1\NWindProxyService\obj\Debug\net8.0\NWindProxyService.pdb
+C:\DISTRIBUIDAS\SalesV1\NWindProxyService\obj\Debug\net8.0\ref\NWindProxyService.dll
