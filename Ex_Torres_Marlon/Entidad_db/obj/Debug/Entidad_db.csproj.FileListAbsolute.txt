@@ -1,0 +1,6 @@
+C:\AVANZADA\Ex_Torres_Marlon\Entidad_db\bin\Debug\Entidad_db.dll
+C:\AVANZADA\Ex_Torres_Marlon\Entidad_db\bin\Debug\Entidad_db.pdb
+C:\AVANZADA\Ex_Torres_Marlon\Entidad_db\obj\Debug\Entidad_db.csproj.AssemblyReference.cache
+C:\AVANZADA\Ex_Torres_Marlon\Entidad_db\obj\Debug\Entidad_db.csproj.CoreCompileInputs.cache
+C:\AVANZADA\Ex_Torres_Marlon\Entidad_db\obj\Debug\Entidad_db.dll
+C:\AVANZADA\Ex_Torres_Marlon\Entidad_db\obj\Debug\Entidad_db.pdb

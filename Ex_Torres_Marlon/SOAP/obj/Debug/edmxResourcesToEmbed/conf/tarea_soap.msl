@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="tarea_soapModelStoreContainer" CdmEntityContainer="tarea_soapEntities">
+    <EntitySetMapping Name="Tareas">
+      <EntityTypeMapping TypeName="tarea_soapModel.Tarea">
+        <MappingFragment StoreEntitySet="Tareas">
+          <ScalarProperty Name="TareaID" ColumnName="TareaID" />
+          <ScalarProperty Name="ProyectoID" ColumnName="ProyectoID" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="FechaLimite" ColumnName="FechaLimite" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

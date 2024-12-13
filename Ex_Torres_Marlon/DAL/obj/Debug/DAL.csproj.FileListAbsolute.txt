@@ -1,0 +1,14 @@
+C:\AVANZADA\Ex_Torres_Marlon\DAL\bin\Debug\DAL.dll.config
+C:\AVANZADA\Ex_Torres_Marlon\DAL\bin\Debug\DAL.dll
+C:\AVANZADA\Ex_Torres_Marlon\DAL\bin\Debug\DAL.pdb
+C:\AVANZADA\Ex_Torres_Marlon\DAL\bin\Debug\Entidad_db.dll
+C:\AVANZADA\Ex_Torres_Marlon\DAL\bin\Debug\EntityFramework.dll
+C:\AVANZADA\Ex_Torres_Marlon\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\AVANZADA\Ex_Torres_Marlon\DAL\bin\Debug\Entidad_db.pdb
+C:\AVANZADA\Ex_Torres_Marlon\DAL\bin\Debug\EntityFramework.xml
+C:\AVANZADA\Ex_Torres_Marlon\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\AVANZADA\Ex_Torres_Marlon\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\AVANZADA\Ex_Torres_Marlon\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\AVANZADA\Ex_Torres_Marlon\DAL\obj\Debug\DAL.csproj.Up2Date
+C:\AVANZADA\Ex_Torres_Marlon\DAL\obj\Debug\DAL.dll
+C:\AVANZADA\Ex_Torres_Marlon\DAL\obj\Debug\DAL.pdb

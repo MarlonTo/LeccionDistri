@@ -1,0 +1,14 @@
+C:\AVANZADA\Ex_Torres_Marlon\SLC\obj\Debug\SLC.csproj.AssemblyReference.cache
+C:\AVANZADA\Ex_Torres_Marlon\SLC\obj\Debug\SLC.csproj.CoreCompileInputs.cache
+C:\AVANZADA\Ex_Torres_Marlon\SLC\bin\Debug\SLC.dll
+C:\AVANZADA\Ex_Torres_Marlon\SLC\bin\Debug\SLC.pdb
+C:\AVANZADA\Ex_Torres_Marlon\SLC\bin\Debug\DAL.dll
+C:\AVANZADA\Ex_Torres_Marlon\SLC\bin\Debug\Entidad_db.dll
+C:\AVANZADA\Ex_Torres_Marlon\SLC\bin\Debug\EntityFramework.dll
+C:\AVANZADA\Ex_Torres_Marlon\SLC\bin\Debug\DAL.pdb
+C:\AVANZADA\Ex_Torres_Marlon\SLC\bin\Debug\DAL.dll.config
+C:\AVANZADA\Ex_Torres_Marlon\SLC\bin\Debug\Entidad_db.pdb
+C:\AVANZADA\Ex_Torres_Marlon\SLC\bin\Debug\EntityFramework.xml
+C:\AVANZADA\Ex_Torres_Marlon\SLC\obj\Debug\SLC.csproj.Up2Date
+C:\AVANZADA\Ex_Torres_Marlon\SLC\obj\Debug\SLC.dll
+C:\AVANZADA\Ex_Torres_Marlon\SLC\obj\Debug\SLC.pdb

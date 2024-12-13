@@ -1,0 +1,79 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\AVANZADA\\Ex_Torres_Marlon\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8A081B49-4290-4E67-BE0C-364A043BE1A1}|SOAP\\SOAP.csproj|c:\\avanzada\\ex_torres_marlon\\soap\\service1.svc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A081B49-4290-4E67-BE0C-364A043BE1A1}|SOAP\\SOAP.csproj|solutionrelative:soap\\service1.svc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4ED8648-CB9E-4041-9326-419AA79CBE1B}|BLL\\BLL.csproj|c:\\avanzada\\ex_torres_marlon\\bll\\tarealogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4ED8648-CB9E-4041-9326-419AA79CBE1B}|BLL\\BLL.csproj|solutionrelative:bll\\tarealogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{313EFE94-893D-4347-B550-75723609343E}|SLC\\SLC.csproj|c:\\avanzada\\ex_torres_marlon\\slc\\itareaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{313EFE94-893D-4347-B550-75723609343E}|SLC\\SLC.csproj|solutionrelative:slc\\itareaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ITareaService.cs",
+              "DocumentMoniker": "C:\\AVANZADA\\Ex_Torres_Marlon\\SLC\\ITareaService.cs",
+              "RelativeDocumentMoniker": "SLC\\ITareaService.cs",
+              "ToolTip": "C:\\AVANZADA\\Ex_Torres_Marlon\\SLC\\ITareaService.cs",
+              "RelativeToolTip": "SLC\\ITareaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T22:09:20.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TareaLogic.cs",
+              "DocumentMoniker": "C:\\AVANZADA\\Ex_Torres_Marlon\\BLL\\TareaLogic.cs",
+              "RelativeDocumentMoniker": "BLL\\TareaLogic.cs",
+              "ToolTip": "C:\\AVANZADA\\Ex_Torres_Marlon\\BLL\\TareaLogic.cs",
+              "RelativeToolTip": "BLL\\TareaLogic.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T22:09:10.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Service1.svc.cs",
+              "DocumentMoniker": "C:\\AVANZADA\\Ex_Torres_Marlon\\SOAP\\Service1.svc.cs",
+              "RelativeDocumentMoniker": "SOAP\\Service1.svc.cs",
+              "ToolTip": "C:\\AVANZADA\\Ex_Torres_Marlon\\SOAP\\Service1.svc.cs",
+              "RelativeToolTip": "SOAP\\Service1.svc.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAxwEYAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T22:04:29.064Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

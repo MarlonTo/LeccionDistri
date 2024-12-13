@@ -1,0 +1,12 @@
+C:\AVANZADA\Ex_Torres_Marlon\SOAP\bin\SOAP.dll.config
+C:\AVANZADA\Ex_Torres_Marlon\SOAP\bin\SOAP.dll
+C:\AVANZADA\Ex_Torres_Marlon\SOAP\bin\SOAP.pdb
+C:\AVANZADA\Ex_Torres_Marlon\SOAP\bin\EntityFramework.dll
+C:\AVANZADA\Ex_Torres_Marlon\SOAP\bin\EntityFramework.SqlServer.dll
+C:\AVANZADA\Ex_Torres_Marlon\SOAP\bin\EntityFramework.xml
+C:\AVANZADA\Ex_Torres_Marlon\SOAP\bin\EntityFramework.SqlServer.xml
+C:\AVANZADA\Ex_Torres_Marlon\SOAP\obj\Debug\SOAP.csproj.AssemblyReference.cache
+C:\AVANZADA\Ex_Torres_Marlon\SOAP\obj\Debug\SOAP.csproj.CoreCompileInputs.cache
+C:\AVANZADA\Ex_Torres_Marlon\SOAP\obj\Debug\SOAP.csproj.Up2Date
+C:\AVANZADA\Ex_Torres_Marlon\SOAP\obj\Debug\SOAP.dll
+C:\AVANZADA\Ex_Torres_Marlon\SOAP\obj\Debug\SOAP.pdb
